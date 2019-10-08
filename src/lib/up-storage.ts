@@ -206,6 +206,9 @@ class ProxyStorage implements IProxy {
       gzip: true,
       timeout: this.timeout,
       strictSSL: this.strict_ssl,
+      agentOptions: {
+        keepAlive: true,
+      },
     };
 
     if (this.ca) {
